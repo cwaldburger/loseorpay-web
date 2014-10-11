@@ -9,7 +9,7 @@ Research has proven that there are four main influencing factors that help peopl
 > 3. Make it competitive.
 > 4. Make it small and temporary.”
 > 
-> - Tim Ferris, «The 4 Hour Body»
+> *Tim Ferris, «The 4 Hour Body»*
 
 Our app serves all four and provides even more help.
 
