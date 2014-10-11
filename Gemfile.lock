@@ -52,6 +52,7 @@ GEM
       warden (~> 1.2.3)
     diff-lcs (1.2.5)
     erubis (2.7.0)
+    evernote-thrift (1.25.1)
     execjs (2.2.1)
     faraday (0.9.0)
       multipart-post (>= 1.2, < 3)
@@ -195,6 +196,7 @@ DEPENDENCIES
   capybara (= 2.1.0)
   coffee-rails (= 4.0.1)
   devise
+  evernote-thrift
   jbuilder (= 1.0.2)
   jquery-rails (= 3.0.4)
   omniauth
