@@ -1,5 +1,4 @@
 LoseorpayWeb::Application.routes.draw do
-  devise_for :users
   root  'static_pages#home'
   match '/help',    to: 'static_pages#help',    via: 'get'
   match '/about',   to: 'static_pages#about',   via: 'get'
@@ -7,8 +6,11 @@ LoseorpayWeb::Application.routes.draw do
   match '/signup',  to: 'static_pages#signup',  via: 'get'
   match '/stats',   to: 'static_pages#stats',   via: 'get'
 
+
+
   devise_for :users, :controllers => { omniauth_callbacks: 'omniauth_callbacks' }
   match '/users/:id/finish_signup' => 'users#finish_signup', via: [:get, :patch], :as => :finish_signup
+
     # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

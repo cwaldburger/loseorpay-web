@@ -42,5 +42,5 @@ LoseorpayWeb::Application.configure do
     password: 'somepass',
     authentication: :plain,
     domain: 'somedomain.com'
-  }s
+  }
 end
