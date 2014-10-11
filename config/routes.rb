@@ -5,6 +5,7 @@ LoseorpayWeb::Application.routes.draw do
   match '/contact', to: 'static_pages#contact', via: 'get'
   match '/signup',  to: 'static_pages#signup',  via: 'get'
   match '/stats',   to: 'static_pages#stats',   via: 'get'
+  match '/cart',    to: 'static_pages#cart',    via: 'get'
 
 
 
