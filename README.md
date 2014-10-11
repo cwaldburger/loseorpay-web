@@ -1,4 +1,4 @@
-[**LOSE or PAY*](http://loseorpay.herokuapp.com) is the perfect companion app for anyone looking to lose weight who hasn't been able to keep up the needed motivation to stick to his/her diet goals.
+[**LOSE or PAY**](http://loseorpay.herokuapp.com) is the perfect companion app for anyone looking to lose weight who hasn't been able to keep up the needed motivation to stick to his/her diet goals.
 
 Research has proven that there are four main influencing factors that help people to be more disciplined:
 
@@ -25,5 +25,9 @@ It is not important how much weight you loose from week to week, it is only impo
 To help you reach that goal, we do not only remind you with emails, we also help you live a healthier lifestyle. Based on your performance, we'll send you dietary plans and recommendations on what to eat. We will save shopping lists for healthy food directly to your [**Evernote app**](http://evernote.com), which you'll always have handy when your in the store doing your shopping. If you prefer to do your shopping online, we'll provide a one-click solution from our website to buy healthy food from **[Migros' leshop.ch](http://leshop.ch)**.
 
 
+Join LOSE or PAY online on [http://loseorpay.herokuapp.com/](http://loseorpay.herokuapp.com/)
 
-The app works as follows: After logging in,  make a bet on weekly losing weight. Each Monday I have to weigh myself, film it and import the video into the website and then if I gained weight compared to the last weeks result, I pay my bet, if I lose weight, I get to keep my money and win a share of the money pool of the weekly gainers. I can track my progress or stagnation and get a clear timeline of the weight development. This game and monetary prize keeps me going and competing against my self and the community.
+Find our source on GitHub:
+
+- [Web App](https://github.com/cwaldburger/loseorpay-web)
+- [iOS Client](https://github.com/cwaldburger/loseorpay-client)
