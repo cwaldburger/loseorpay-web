@@ -5,6 +5,8 @@
     <%= stylesheet_link_tag "application", media: "all",
                                            "data-turbolinks-track" => true %>
     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "http://code.highcharts.com/highcharts.js" %>
+    <%= javascript_include_tag "http://code.highcharts.com/modules/exporting.js" %>
     <%= csrf_meta_tags %>
     <%= render 'layouts/shim' %>
   </head>
