@@ -3,13 +3,14 @@ ruby '2.0.0'
 #ruby-gemset=railstutorial_rails_4_0
 
 gem 'rails', '4.0.8'
-gem "twitter-bootstrap-rails"
+gem  'twitter-bootstrap-rails', :github => 'seyhunak/twitter-bootstrap-rails'
 gem 'sprockets', '2.11.0'
 gem 'devise'
 gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'omniauth-facebook'
 gem 'evernote-thrift'
+
 
 group :development, :test do
   gem 'sqlite3', '1.3.8'

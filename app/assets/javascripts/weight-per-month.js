@@ -1,5 +1,5 @@
 $(function () {
-    $('#container').highcharts({
+    $('#highchart').highcharts({
         title: {
             text: 'Monthly Average Temperature',
             x: -20 //center
