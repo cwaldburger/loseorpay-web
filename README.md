@@ -31,3 +31,23 @@ Find our source on GitHub:
 
 - [Web App](https://github.com/cwaldburger/loseorpay-web)
 - [iOS Client](https://github.com/cwaldburger/loseorpay-client)
+
+**FAQ**
+
+**1. When do you charge and pay me?**
+
+When you sign up, we ask for authorization of your credit card for up to four times your weekly commitment. When you lose weight and receive money from other users, we top up your credit. You can always contact our support and have the money wired.
+
+**2. When does this stop? How do I get out of my commitment?**
+
+We really don't want you to give up and therefore it's quite pricey - only after you do not lose weight in four consecutive weeks, we cancel your account and commitment. We want your weight to drop - not your to drop out!
+
+Also, if you reach a healthy BMI - anything between 18.5 and 24.9 – you can quit at any time. We also don't want you to drop below 18.5 and we'll automatically suggest to eat a more if you get too close to the lower threshold and update your shopping list.
+
+**3. Can I export my data?**
+
+Yes, we'll soon add support to export your data to [Evernote](http://www.evernote.com) notebooks.
+
+**4. How do you know what's healthy for me and what not?**
+
+We're just starting out and can only provide general nutrition recommendation. if you are on a special diet (gluten-free, lactose-free, vegan, ...) please contact us at [support@loseorpay.com](mailto:lee.wasilenko@gmail.com) and we'll do our best to provide you with a customized meal plan. Please understand that this could take a while in our initial growth phase.
