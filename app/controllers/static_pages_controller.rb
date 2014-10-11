@@ -34,7 +34,105 @@ class StaticPagesController < ApplicationController
       
 
     require 'evernote.rb'
-    Everclass.createNote("Shopping List for today",  "1 Cellery, 1 Carrot, 1kg of Meat")
+    Everclass.createNote("Shopping list for the week:",  "5 apples
+
+5 oranges
+
+500 gr chicken breast
+
+500 gr beef
+
+1 bag of quinoa
+
+1 bag of rice
+
+5 tomatoes
+
+2 cucumbers
+
+2 garlic cloves
+
+4 onions
+
+200 gr of almonds
+
+200 gr of Brazilian nuts
+
+5 plain yogurts
+
+6 eggs")
+
+    Everclass.createNote("Fisher’s fishy fish menu",  "Instructions:
+
+Go to Canada
+
+Catch a salmon
+
+Or go to LeShop.com and get a salmon in skin
+
+
+Additionally get:
+
+1 Lemon
+
+1 Garlic clove
+
+1 Ginger head
+
+100 ml of Olive Oil
+
+
+Cook it:
+
+
+Shred ginger and garlic
+
+Mix in olive oil
+
+Squeeze lemon into the mixture
+
+Rub the salmon with the mixture
+
+Put it into the oven for 20 min at 250 degrees
+
+Enjoy for dinner with some fresh salad")
+
+    Everclass.createNote("Quinoa salad delight",  "Instructions:
+
+Buy a quinoa plantation in Latin America
+
+Plant seeds
+
+Wait 3 months
+
+Harvest
+
+Or go to LeShop.com and get a bag of quinoa
+
+
+Additionally get:
+
+1 Lemon
+
+3 Tomatoes
+
+1 Onion
+
+100 ml of Olive Oil
+
+
+Cook it:
+
+Cook 100 grams of quinoa, let it cool down a bit
+
+Cut and mix tomatoes and onion in small pieces
+
+Squeeze some lemon over the mixture
+
+Mix quinoa, vegetables and olive oil
+
+
+And there is your healthy lunch!")
 
   end
 end
