@@ -2,7 +2,9 @@
 <div class="page-header">
 <h1>Your stats</h1>
 </div>
-<h2>BMI</h2>
+<h2>BMI: 24</h2>
+<%= link_to image_tag(image_path("LeShopMigros.JPG"), class: "img", size: "100"), 
+'http://www.leshop.ch/leshop/Main.do/direct/en/ean/95360', :target => "_blank"  %>
 <div id="highchart" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
 <table class="table table-striped">
   <thead>
@@ -22,7 +24,6 @@
       </tr>
   </tbody>
 </table>
-
 
 <script>
 $(function () {
