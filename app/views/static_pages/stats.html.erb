@@ -6,9 +6,11 @@
             <p>The latest image you supplied via Evernote</p>
             <p>The weight Evernote extracted from this image:</p>
             <p>This means your current BMI is:</p>
+            <p ><%= image_tag "profile.png", class: "img-responsive", style: "margin: 0 auto;" %></p>
+            <p class="small">Chef Carl has mastered the art of delicious, healthy Cooking.</p>
             <h3>We've just sent an updated list of recipes and Shopping list to your Evernote Notebook!</h3>
             <p class="small">Open your Evernote app now or when you're at the store and it will be all right there for you.</p>
-            <p ><%= image_tag "profile.png", class: "img-responsive", style: "margin: 0 auto;" %></p>
+            
         </div>
 
     </div>
@@ -27,11 +29,11 @@
 
     <div class="row">
         <div class="col-md-8 col-sm-12 col-md-offset-2">
-            <div class="col-lg-6 col-sm-8 col-lg-offset-3 col-sm-offset-2 text-center">
-                <h2>YOUR PERFORMANCE</h2>
+            <div class="col-sm-8 col-sm-offset-2 text-center">
+                <h2>YOUR RECENT PERFORMANCE</h2>
                 <hr class="star-primary">
             </div>
-            <h2>BMI: 24</h2>
+            
             
             
             <div id="highchart" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
