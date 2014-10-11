@@ -15,7 +15,7 @@ class Everclass
 
   def self.createNote(title, content)
     userStore = self.connectWithDevToken
-    [notebook, noteStore] = self.returnNotebook(userStore,"WeightLogs")
+    notebook, noteStore = self.returnNotebook(userStore,"WeightLogs")
     self.writeNote(title, content, notebook, noteStore)
 
   end
