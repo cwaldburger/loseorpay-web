@@ -35,5 +35,6 @@ class StaticPagesController < ApplicationController
 
     require 'evernote.rb'
     Everclass.createNote("Shopping List for today",  "1 Cellery, 1 Carrot, 1kg of Meat")
+
   end
 end
