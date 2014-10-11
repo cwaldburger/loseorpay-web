@@ -1,13 +1,39 @@
 <div class="container">
     <div class="row">
+        <div class="col-lg-6 col-sm-8 col-lg-offset-3 col-sm-offset-2 text-center">
+            <h2>YOUR LAST SUBMISSION</h2>
+            <hr class="star-primary">
+            <p>The latest image you supplied via Evernote</p>
+            <p>The weight Evernote extracted from this image:</p>
+            <p>This means your current BMI is:</p>
+            <h3>We've just sent an updated list of recipes and Shopping list to your Evernote Notebook!</h3>
+            <p class="small">Open your Evernote app now or when you're at the store and it will be all right there for you.</p>
+            <p ><%= image_tag "profile.png", class: "img-responsive", style: "margin: 0 auto;" %></p>
+        </div>
+
+    </div>
+
+
+    <div class="row">
+        <div class="col-lg-6 col-sm-8 col-lg-offset-3 col-sm-offset-2 text-center">
+            <h2>Treat yourself to some delicious food!</h2>
+            <hr class="star-primary">
+            <p>Easy and convenient, get all the food delivered to your door: 
+            <%= link_to image_tag(image_path("LeShopMigros.JPG"), class: "img", size: "100"),'http://www.leshop.ch/leshop/Main.do/direct/en/ean/95360', :target => "_blank"  %> </p>
+            <p class="small">This will directly take you to le-shop.ch's website with all the ingredients already in your basket. Does it get any more comfortable?</p>
+            
+        </div>
+    </div>
+
+    <div class="row">
         <div class="col-md-8 col-sm-12 col-md-offset-2">
-            <%= render :partial => 'form' %>
-            <div class="page-header">
-                <h1>Your stats</h1>
+            <div class="col-lg-6 col-sm-8 col-lg-offset-3 col-sm-offset-2 text-center">
+                <h2>YOUR PERFORMANCE</h2>
+                <hr class="star-primary">
             </div>
             <h2>BMI: 24</h2>
-            <%= link_to image_tag(image_path("LeShopMigros.JPG"), class: "img", size: "100"), 
-            'http://www.leshop.ch/leshop/Main.do/direct/en/ean/95360', :target => "_blank"  %>
+            
+            
             <div id="highchart" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
             <table class="table table-striped">
               <thead>
