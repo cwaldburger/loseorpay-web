@@ -12,15 +12,20 @@ class StaticPagesController < ApplicationController
     $bmi = (params[:weight].to_f/(params[:height].to_f/100*params[:height].to_f/100)).round(2)
 
     if $bmi < 18.5
-      $answer = "You're considered underweight. You should not loose any more weight."
+      $answerTitle = "You're considered underweight.";
+      $answer = "You should not loose any more weight. Treat yourself to that chocolate cake or Burger you've looking forwrad to devouring! :)"
     elsif ($bmi >= 18.5 && 24.9 > $bmi)
-      $answer = "You're considered ok."
+      $answerTitle = "Hey there! You're in the zone - your BMI is just right."
+      $answer = "Make sure you don't drop below 18.5 by still signing up and profiting from our delicious recipe recommendations!"
     elsif ($bmi >= 24.9 && 30 > $bmi)
-      $answer = "You're overweight"
+      $answerTitle = "Time to talk Buddy! You weigh more than you should."
+      $answer = "Sign up and we'll help you reach a healthier Body Mass Index by tracking your progress and sending you delicious menu and recipe recommendations! Did you know that just starting to track your weight will have a positive effect on your weight? If you're intereted in the science behind this, head over to Tim Ferris' <a href=\"http://fourhourbody.com/\" target=\"_blank\">website</a>. Don't forget to set your weekly wager below and start improving your help today!"
     elsif ($bmi >= 30)
-      $answer = "You're obese"
+      $answerTitle = "It may look like an endless road to get to a healthier BMI but we're here to help you along the way!"
+      $answer =  "Sign up and we'll help you reach a healthier Body Mass Index by tracking your progress and sending you delicious menu and recipe recommendations! Did you know that just starting to track your weight will have a positive effect on your weight? If you're intereted in the science behind this, head over to Tim Ferris' <a href=\"http://fourhourbody.com/\" target=\"_blank\">website</a>. Don't forget to set your weekly wager below and start improving your help today!"
     else
-      $answer = "something went wrong"
+      $answerTitle = "Please provide us with your Weight and Height"
+      $answer = "Please provide us with your Weight and Height"
     end
       
 
