@@ -5,3 +5,16 @@
 .high-form {
   height: 34px;
 }
+
+
+.navbar .container {
+  width: 80%;
+}
+
+@media (min-width: 768px) { 
+  .navbar .container {
+    width: auto;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
