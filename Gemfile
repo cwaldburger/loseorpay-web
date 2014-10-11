@@ -9,6 +9,7 @@ gem 'devise'
 gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'omniauth-facebook'
+gem 'evernote_oauth'
 gem 'evernote-thrift'
 
 
