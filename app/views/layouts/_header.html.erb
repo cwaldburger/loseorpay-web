@@ -1,20 +1,19 @@
-
-      <!-- Header -->
-      <header>
-          <div class="container">
-              <div class="row">
-                  <div class="col-lg-12">
-                      <% if params[:action] == "home" %>
-                        <%= image_tag "profile.png", class: "img-responsive" %>
-                      <% end %>
-                      <div class="intro-text">
-                          <span class="name">LOSE or PAY</span>
-                          <hr class="star-light">
-                          <% if params[:action] == "home" %>
-                            <span class="skills">LOSE Weight and have fun while you're at it!</span>
-                          <% end %>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </header>
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <% if params[:action] == "home" %>
+                  <%= image_tag "profile.png", class: "img-responsive" %>
+                  <p class="small"><em>Carl, the Controller</em></p>
+                <% end %>
+                <div class="intro-text">
+                    <span class="name">LOSE or PAY</span>
+                    <hr class="star-light">
+                    <% if params[:action] == "home" %>
+                      <span class="skills">LOSE Weight and have fun while you're at it!</span>
+                    <% end %>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

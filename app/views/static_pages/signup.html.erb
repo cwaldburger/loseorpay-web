@@ -8,10 +8,12 @@
     <div class="row" style="min-height: 500px">
         <div class="col-lg-6 col-sm-8 col-lg-offset-3 col-sm-offset-2 text-center">
             <h3><%== $answerTitle %></h3>
-            <p><%= $answer.html_safe %></p>
             
             <p ><%= image_tag "profile.png", class: "img-responsive", style: "margin: 0 auto;" %></p>
+            <p class="small"><%= $carlOp %></p>
             
+            <p><%= $answer.html_safe %></p>
+
             <p>By the way, this is what your BMI tells you about your health:</p>
             <p class="small">Underweight = <18.5hr <br>
             Normal weight = 18.5–24.9 <br>
