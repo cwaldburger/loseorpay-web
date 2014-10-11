@@ -10,7 +10,17 @@ class Everclass
   # To run (Unix):
   #   ruby EDAMTest.rb
   #
+
+  $authToken = "S=s1:U=8fa5f:E=150563fe2fb:C=148fe8eb370:P=1cd:A=en-devtoken:V=2:H=a2c06cdfa2821731b951198d4e366a01"
+
   def self.createNote(title, content)
+    userStore = self.connectWithDevToken
+    [notebook, noteStore] = self.returnNotebook(userStore,"WeightLogs")
+    self.writeNote(title, content, notebook, noteStore)
+
+  end
+
+  def self.connectWithDevToken
 
     require "digest/md5"
     require 'evernote-thrift'
@@ -19,9 +29,8 @@ class Everclass
     # purpose of exploring the API, you can get a developer token that allows
     # you to access your own Evernote account. To get a developer token, visit
     # https://sandbox.evernote.com/api/DeveloperToken.action
-    authToken = "S=s1:U=8fa5f:E=150563fe2fb:C=148fe8eb370:P=1cd:A=en-devtoken:V=2:H=a2c06cdfa2821731b951198d4e366a01"
 
-    if authToken == "your developer token"
+    if $authToken == "your developer token"
       puts "Please fill in your developer token"
       puts "To get a developer token, visit https://sandbox.evernote.com/api/DeveloperToken.action"
       exit(1)
@@ -45,26 +54,41 @@ class Everclass
     puts
     exit(1) unless versionOK
 
+    userStore
+
+  end
+
+  def self.returnNotebook(userStore, notebookTitle)
+
     # Get the URL used to interact with the contents of the user's account
     # When your application authenticates using OAuth, the NoteStore URL will
     # be returned along with the auth token in the final OAuth request.
     # In that case, you don't need to make this call.
-    noteStoreUrl = userStore.getNoteStoreUrl(authToken)
+    noteStoreUrl = userStore.getNoteStoreUrl($authToken)
 
     noteStoreTransport = Thrift::HTTPClientTransport.new(noteStoreUrl)
     noteStoreProtocol = Thrift::BinaryProtocol.new(noteStoreTransport)
     noteStore = Evernote::EDAM::NoteStore::NoteStore::Client.new(noteStoreProtocol)
 
     # List all of the notebooks in the user's account
-    notebooks = noteStore.listNotebooks(authToken)
+    notebooks = noteStore.listNotebooks($authToken)
     puts "Found #{notebooks.size} notebooks:"
-    defaultNotebook = notebooks.first
+    selectedNotebook = notebooks.first
     notebooks.each do |notebook|
       puts "  * #{notebook.name}"
+      if notebook.name == notebookTitle then selectedNotebook = notebook end
     end
 
+    puts " => selected: #{selectedNotebook.name}"
+
+    [selectedNotebook, noteStore]
+
+  end
+
+  def self.writeNote(title, content, notebook, noteStore)
+
     puts
-    puts "Creating a new note in the default notebook: #{defaultNotebook.name}"
+    puts "Creating a new note in the default notebook: #{notebook.name}"
     puts
 
     # To create a new note, simply create a new Note object and fill in
@@ -112,7 +136,7 @@ EOF
     # Finally, send the new note to Evernote using the createNote method
     # The new Note object that is returned will contain server-generated
     # attributes such as the new note's unique GUID.
-    createdNote = noteStore.createNote(authToken, note)
+    createdNote = noteStore.createNote($authToken, note)
 
     puts "Successfully created a new note with GUID: #{createdNote.guid}"
 
