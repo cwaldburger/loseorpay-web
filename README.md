@@ -40,9 +40,9 @@ When you sign up, we ask for authorization of your credit card for up to four ti
 
 **2. When does this stop? How do I get out of my commitment?**
 
-We really don't want you to give up and therefore it's quite pricey - only after you do not lose weight in four consecutive weeks, we cancel your account and commitment. We want your weight to drop - not your to drop out!
+We really don't want you to give up and therefore it's quite pricey - only after you do not lose weight in four consecutive weeks, we cancel your account and commitment. We want your weight to drop - not you to drop out!
 
-Also, if you reach a healthy BMI - anything between 18.5 and 24.9 – you can quit at any time. We also don't want you to drop below 18.5 and we'll automatically suggest to eat a more if you get too close to the lower threshold and update your shopping list.
+Also, if you reach a healthy BMI - anything between 18.5 and 24.9 – you can quit at any time. We also don't want you to drop below 18.5 and we'll automatically suggest to eat more if you get too close to the lower threshold and update your shopping list.
 
 **3. Can I export my data?**
 
