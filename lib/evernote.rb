@@ -13,10 +13,19 @@ class Everclass
 
   $authToken = "S=s1:U=8fa5f:E=150563fe2fb:C=148fe8eb370:P=1cd:A=en-devtoken:V=2:H=a2c06cdfa2821731b951198d4e366a01"
 
+  def self.getAuthToken
+    puts $authToken
+  end
+
   def self.createNote(title, content)
     userStore = self.connectWithDevToken
     notebook, noteStore = self.returnNotebook(userStore,"WeightLogs")
     self.writeNote(title, content, notebook, noteStore)
+
+  end
+
+  def self.getLatestPicture
+
 
   end
 
