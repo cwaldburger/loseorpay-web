@@ -1,71 +1,77 @@
-<%= render :partial => 'form' %>
-<div class="page-header">
-<h1>Your stats</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-sm-12 col-md-offset-2">
+            <%= render :partial => 'form' %>
+            <div class="page-header">
+                <h1>Your stats</h1>
+            </div>
+            <h2>BMI: 24</h2>
+            <%= link_to image_tag(image_path("LeShopMigros.JPG"), class: "img", size: "100"), 
+            'http://www.leshop.ch/leshop/Main.do/direct/en/ean/95360', :target => "_blank"  %>
+            <div id="highchart" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Weight</th>
+                  <th>Change</th>
+                  <th>Pay?</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                <td>11-10-2014</td>
+                <td>78.2</td>
+                <td>-0.2</td>
+                <td>$4.05</td>
+            </tr>
+        </tbody>
+    </table>
 </div>
-<h2>BMI: 24</h2>
-<%= link_to image_tag(image_path("LeShopMigros.JPG"), class: "img", size: "100"), 
-'http://www.leshop.ch/leshop/Main.do/direct/en/ean/95360', :target => "_blank"  %>
-<div id="highchart" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th>Date</th>
-      <th>Weight</th>
-      <th>Change</th>
-      <th>Pay?</th>
-    </tr>
-  </thead>
-  <tbody>
-      <tr>
-        <td>11-10-2014</td>
-        <td>78.2</td>
-        <td>-0.2</td>
-        <td>$4.05</td>
-      </tr>
-  </tbody>
-</table>
+</div>
+</div>
 
 <script>
-$(function () {
-    $('#highchart').highcharts({
-        title: {
-            text: 'Weight per Week',
-            x: -20 //center
-        },
-        subtitle: {
-            text: 'Since starting the challenge',
-            x: -20
-        },
-        xAxis: {
-        	title: {
-                text: 'Week'
-            },
-            categories: ['1', '2', '3', '4', '5', '6',
-                '7', '8', '9', '10', '11', '12']
-        },
-        yAxis: {
+    $(function () {
+        $('#highchart').highcharts({
             title: {
-                text: 'Kg'
-            },
-            plotLines: [{
-                value: 0,
-                width: 1,
-                color: '#808080'
-            }]
-        },
-        tooltip: {
-            valueSuffix: 'Kg'
-        },
-        legend: {
-            layout: 'vertical',
-            align: 'right',
-            verticalAlign: 'middle',
-            borderWidth: 0
-        },
-        series: [{
-            name: 'You',
-            data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6]
-        }]
-    });
+                text: 'Weight per Week',
+                    x: -20 //center
+                },
+                subtitle: {
+                    text: 'Since starting the challenge',
+                    x: -20
+                },
+                xAxis: {
+                    title: {
+                        text: 'Week'
+                    },
+                    categories: ['1', '2', '3', '4', '5', '6',
+                    '7', '8', '9', '10', '11', '12']
+                },
+                yAxis: {
+                    title: {
+                        text: 'Kg'
+                    },
+                    plotLines: [{
+                        value: 0,
+                        width: 1,
+                        color: '#808080'
+                    }]
+                },
+                tooltip: {
+                    valueSuffix: 'Kg'
+                },
+                legend: {
+                    layout: 'vertical',
+                    align: 'right',
+                    verticalAlign: 'middle',
+                    borderWidth: 0
+                },
+                series: [{
+                    name: 'You',
+                    data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6]
+                }]
+            });
 });
 </script>
