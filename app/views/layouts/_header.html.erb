@@ -4,11 +4,15 @@
           <div class="container">
               <div class="row">
                   <div class="col-lg-12">
-                      <%= image_tag "profile.png", class: "img-responsive" %>
+                      <% if params[:action] == "home" %>
+                        <%= image_tag "profile.png", class: "img-responsive" %>
+                      <% end %>
                       <div class="intro-text">
                           <span class="name">LOSE or PAY</span>
                           <hr class="star-light">
-                          <span class="skills">LOSE and WIN - GAIN and LOSE</span>
+                          <% if params[:action] == "home" %>
+                            <span class="skills">LOSE and WIN - GAIN and LOSE</span>
+                          <% end %>
                       </div>
                   </div>
               </div>
