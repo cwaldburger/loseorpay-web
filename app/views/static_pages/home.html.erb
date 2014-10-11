@@ -1,71 +1,119 @@
-<!-- Portfolio Grid Section -->
-      <section id="portfolio">
-          <div class="container">
-              <div class="row">
-                  <div class="col-lg-12 text-center">
-                      <h2>HOW IT WORKS</h2>
-                      <hr class="star-primary">
-                  </div>
-              </div>
-              <div class="row">
-                  <div class="col-sm-4 portfolio-item">
-                      <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
-                          <div class="caption">
-                              <div class="caption-content">
-                                  <i class="fa fa-search-plus fa-3x"></i>
-                              </div>
-                          </div>
-                          <%= image_tag "cake.png", class: "img-responsive" %>
-                      </a>
-                  </div>
-                  <div class="col-sm-4 portfolio-item">
-                      <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
-                          <div class="caption">
-                              <div class="caption-content">
-                                  <i class="fa fa-search-plus fa-3x"></i>
-                              </div>
-                          </div>
-                          <%= image_tag "game.png", class: "img-responsive" %>
-                      </a>
-                  </div>
-              </div>
-          </div>
-      </section>
 
-      <!-- About Section -->
-      <section class="success" id="about">
-          <div class="container">
-              <div class="row">
-                  <div class="col-lg-12 text-center">
-                      <h2>SIGN UP</h2>
-                      <hr class="star-light">
-                  </div>
-              </div>
-              <div class="row">
-                  <div class="col-lg-4 col-lg-offset-2">
-                      <p>To estimate your BMI we'll just need to know a coupole things about you</p>
-                      <%= form_tag("/signup", method: "get") do %>
-                        <div class="form-group">
-                          <label for="exampleInputEmail1" class="sr-only">Email address</label>
-                          <div class="input-group">
-                            <input type="text" name="weight" class="form-control high-form" style="height: 34px" id="weight" placeholder="Weight">
-                            <span class="input-group-addon">kg</span>
-                          </div>
-                        </div>
-                        <div class="form-group">
-                          <label for="exampleInputPassword1" class="sr-only">Password</label>
-                          <div class="input-group">
-                            <input type="text" name="height" class="form-control" style="height: 34px" id="height" placeholder="Height">
-                            <span class="input-group-addon">cm</span>
-                          </div>
-                        </div>
-                        <button type="submit" class="btn btn-default">Proceed To Sign-Up</button>
-                      <% end %>
-                  </div>
+<section id="portfolio">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2>HOW IT WORKS</h2>
+        <hr class="star-primary">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-4 portfolio-item">
+        <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+          <%= image_tag "cake.png", class: "img-responsive" %>
+        </a>
+      </div>
+      <div class="col-sm-8 portfolio-item">
+        <h3>LOSE Weight and get paid while you're at it!</h3>
+        <p>Losing weight is hard. It is even harded if you have to lose a lot of weight. After three weeks of fasting, it is just too tempting to treat yourself to this piece of Cheesecake or that delicious Burger, you've kept at a safe distance, to celebrate the progress you've made during the past three weeks.</p>
+        <p><strong>STOP right there!</strong> Losing weight only works if you constantly lose weight. It doesn't matter how much weight you lose week to week, it just matters that you constantly lose weight and don't fall back into your old habits. We help you to continuously make the right choice by making it not only fun, but even lucrative.</p>
+      </div>
+    </div>
 
-                  <div class="col-lg-4">
-                      <p>We will never publish any of your data</p>
-                  </div>
-              </div>
+    <div class="row">
+      <div class="col-sm-8 portfolio-item">
+        <h3>Games are fun!</h3>
+        <p>We help you reach a healthy Body Mass Index (BMI) in a fun and lucrative way. Here's how it works:</p>
+        <p>
+        <ol>
+          <li>You tell us your <strong>current weight and height</strong> and we'll tell you your current BMI. You should only use our service if you're overweight.</li>
+          <li>You tell us <strong>how much money you want to bet</strong> each week on your own progress. This sum defines how much you'll have to pay to the community pot if you fail to loose weight in a week. It also defines how big your share of the weekly payout will be when you reach your goal and lose weight.</li>
+          <li>Every monday we'll ask you to upload <strong>a fresh picture of your scale</strong> via the <a href="http://evernote.com" target="_blank">Evernote App</a>. We'll automatically read your current weight and keep it in a log book for you.</li>
+          <li><strong>We help you work towards a healthy BMI</strong> by providing you with delicious but healthy recipes - directly delivered to your <a href="http://evernote.com" target="_blank">Evernote Notebook</a> including a shopping list - so that you always have the list at your finger tips when you go shopping.</li>
+        </ol>
+        </p>
+        <p>Once you've reached a healthy BMI, you're free to keep monitoring your weight and continue to get free meal plans and recipe recommendations.</p>
+        <p><strong>Now let's get started to get fit & healthy!</strong></p>
+        <p><em>The LOSE or PAY-Team</em></p>
+      </div>
+      <div class="col-sm-4 portfolio-item">
+        <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
+          <%= image_tag "game.png", class: "img-responsive" %>
+        </a>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-4 portfolio-item">
+        <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
+          <%= image_tag "safe.png", class: "img-responsive" %>
+        </a>
+      </div>
+      <div class="col-sm-8 portfolio-item">
+        <h3>Questions? We're here to answer!</h3>
+        <ol>
+          <li>
+            <p><strong>When do you charge and pay me?</strong></p>
+            <p>When you sign up, we ask for authorization of your credit card for up to four times your weekly commitment. When you lose weight and receive money from other users, we top up your credit. You can always contact our support and have the money wired.</p>
+          </li>
+          <li>
+            <p><strong>When does this stop? How do I get out of my commitment?</strong></p>
+            <p>We really don't want you to give up and therefore it's quite pricey - only after you do not lose weight in four consecutive weeks, we cancel your account and commitment. We want your weight to drop - not your to drop out! </p>
+            <p>Also, if you reach a healthy BMI - anything between 18.5 and 24.9 – you can quit at any time. We also don't want you to drop below 18.5 and we'll automatically suggest to eat a more if you get too close to the lower threshold and update your shopping list.</p>
+          </li>
+          <li>
+            <p><strong>Can I export my data?</strong></p>
+            <p>Yes, we'll soon add support to export your data to [Evernote](http://www.evernote.com) notebooks.</p>
+          </li>
+          <li>
+            <p><strong>How do you know what's healthy for me and what not?</strong></p>
+            <p>We're just starting out and can only provide general nutrition recommendation. if you are on a special diet (gluten-free, lactose-free, vegan, ...) please contact us at <a href="mailto:lee.wasilenko@gmail.com">support@loseorpay.com</a> and we'll do our best to provide you with a customized meal plan. Please understand that this could take a while in our initial growth phase.</p>
+          </li>
+        </ol>
+
+        <p>Feel free to reach out to us anytime on <a href="mailto:lee.wasilenko@gmail.com">support@loseorpay.com</a></p>
+
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+
+<section class="success" id="about">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2>START LOSING - SIGN UP</h2>
+        <hr class="star-light">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6 col-sm-6 col-lg-offset-3 col-sm-offset-3">
+        <p>To estimate your BMI we'll just need to know a coupole things about you</p>
+        <%= form_tag("/signup", method: "get") do %>
+        <div class="form-group">
+          <label for="exampleInputEmail1" class="sr-only">Email address</label>
+          <div class="input-group">
+            <input type="text" name="weight" class="form-control high-form" style="height: 34px" id="weight" placeholder="Weight">
+            <span class="input-group-addon">kg</span>
           </div>
-      </section>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1" class="sr-only">Password</label>
+          <div class="input-group">
+            <input type="text" name="height" class="form-control" style="height: 34px" id="height" placeholder="Height">
+            <span class="input-group-addon">cm</span>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-default">Proceed To Sign-Up</button>
+        <% end %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6 col-sm-6 col-lg-offset-3 col-sm-offset-3">
+        <p class="small">Your data is yours and always will be - we will never publish any of your data without your consent.</p>
+      </div>
+    </div>
+  </div>
+</section>
