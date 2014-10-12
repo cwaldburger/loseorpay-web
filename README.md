@@ -31,5 +31,6 @@ Find our source on GitHub:
 
 - [Web App](https://github.com/cwaldburger/loseorpay-web)
 - [iOS Client](https://github.com/cwaldburger/loseorpay-client)
+- [Presentation Slides](https://github.com/cwaldburger/loseorpay-web/blob/master/LOSEorPAY_presentation.pdf) (click on 'Raw')
 
 Check our website for FAQs and more info.
