@@ -11,6 +11,7 @@ gem 'omniauth-twitter'
 gem 'omniauth-facebook'
 gem 'evernote_oauth'
 gem 'evernote-thrift'
+gem 'nokogiri'
 
 
 group :development, :test do

@@ -208,6 +208,7 @@ DEPENDENCIES
   evernote_oauth
   jbuilder (= 1.0.2)
   jquery-rails (= 3.0.4)
+  nokogiri
   omniauth
   omniauth-facebook
   omniauth-twitter
