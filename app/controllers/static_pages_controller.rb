@@ -26,16 +26,26 @@ class StaticPagesController < ApplicationController
 
       current_resource_guid = currentNote.resources.first.guid
 
-    #   current_resource = noteStore.getResource(token, current_resource_guid, true, true, true, true); nil
+      user_info = userStore.getPublicUserInfo("wasilenko")
+      res_guid = current_resource_guid
+      $res_url = "#{user_info.webApiUrlPrefix}/res/#{res_guid}"
 
-    #   file_content = current_resource.data.body; nil
-    #   file_type = current_resource.mime; nil
-    #   file_name = current_resource.attributes.fileName
-    # end
+      xmlString = noteStore.getResourceRecognition(token,current_resource_guid)
+      require 'nokogiri'
 
-    user_info = userStore.getPublicUserInfo("wasilenko")
-    res_guid = current_resource_guid
-    $res_url = "#{user_info.webApiUrlPrefix}/res/#{res_guid}"
+      doc = Nokogiri::XML(xmlString)
+      value = doc.at_xpath('//t').content
+
+      puts value
+
+      if value.to_i > 400
+        value = value.to_f/10
+      end
+
+      $kilos = value
+
+
+      # current_resource = noteStore.getResource(token, current_resource_guid, true, true, true, true); nil
 
   end
 
