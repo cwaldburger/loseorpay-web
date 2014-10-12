@@ -6,6 +6,37 @@ class StaticPagesController < ApplicationController
   end
 
   def stats
+
+    # if params[:process_image] == 1 
+      require 'evernote.rb'
+      token = "S=s1:U=8fa5f:E=150563fe2fb:C=148fe8eb370:P=1cd:A=en-devtoken:V=2:H=a2c06cdfa2821731b951198d4e366a01"
+
+      userStore = Everclass.connectWithDevToken
+      notebook, noteStore = Everclass.returnNotebook(userStore,"WeightLogs")
+
+      noteFilter = Evernote::EDAM::NoteStore::NoteFilter.new 
+      noteFilter.notebookGuid = notebook.guid
+      result_spec = Evernote::EDAM::NoteStore::NotesMetadataResultSpec.new(includeUpdated: true)
+
+      noteList    = noteStore.findNotesMetadata(token, noteFilter,0 , 40000, result_spec)
+
+      noteList.notes.sort! { |a,b| a.updated <=> b.updated }
+      current_note_guid = noteList.notes.last.guid
+      currentNote = noteStore.getNote(token, current_note_guid, false, false, false, false); nil
+
+      current_resource_guid = currentNote.resources.first.guid
+
+    #   current_resource = noteStore.getResource(token, current_resource_guid, true, true, true, true); nil
+
+    #   file_content = current_resource.data.body; nil
+    #   file_type = current_resource.mime; nil
+    #   file_name = current_resource.attributes.fileName
+    # end
+
+    user_info = userStore.getPublicUserInfo("wasilenko")
+    res_guid = current_resource_guid
+    $res_url = "#{user_info.webApiUrlPrefix}/res/#{res_guid}"
+
   end
 
   def signup
@@ -135,4 +166,7 @@ Mix quinoa, vegetables and olive oil
 And there is your healthy lunch!")
 
   end
+
+
+
 end

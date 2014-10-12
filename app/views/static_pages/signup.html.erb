@@ -25,45 +25,50 @@
 </div>
 
 <section class="success" id="about">
-          <div class="container">
-              <div class="row">
-                  <div class="col-lg-12 text-center">
-                      <h2>LET's GET STARTED</h2>
-                      <hr class="star-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2>LET's GET STARTED</h2>
+                <hr class="star-light">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-lg-offset-4">
+                <p>Suggested Wager (per Month)</p>
+                <p class="small">It is up to you, how much you want to bet each week. The more you bet, the more money you'll receive from other members who had to pay that week. But it is also the sum you'll have to pay <strong>per week</strong> if you don't manage to lose weight!</p>
+                <%= form_tag(stats_path, method: "get") do %>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1" class="sr-only">Wager</label>
+                    <div class="input-group">
+                      <span class="input-group-addon">CHF</span>
+                      <input type="text" class="form-control high-form" style="height: 34px" id="weight" placeholder="50">
+                      <span class="input-group-addon">.00</span>
+                    </div>
                   </div>
-              </div>
-              <div class="row">
-                  <div class="col-lg-4 col-lg-offset-4">
-                      <p>Suggested Wager (per Month)</p>
-                      <p class="small">It is up to you, how much you want to bet each week. The more you bet, the more money you'll receive from other members who had to pay that week. But it is also the sum you'll have to pay <strong>per week</strong> if you don't manage to lose weight!</p>
-                      <%= form_tag(stats_path, method: "get") do %>
-                        <div class="form-group">
-                          <label for="exampleInputEmail1" class="sr-only">Wager</label>
-                          <div class="input-group">
-                            <span class="input-group-addon">CHF</span>
-                            <input type="text" class="form-control high-form" style="height: 34px" id="weight" placeholder="50">
-                            <span class="input-group-addon">.00</span>
-                          </div>
-                        </div>
-                        <hr>
-                        <div class="form-group">
-                          <p class="small">We will authorize your credit card for four times the wager you chose above. We will not charge your card before you actually gain some weigth.</p>
-                          <label for="exampleInputPassword1" class="sr-only">Password</label>
-                          <div class="input-group">
-                            <input type="text" class="form-control" style="height: 34px" id="height" placeholder="0000 0000 0000 0000">
-                          </div>
-                          <label for="exampleInputPassword1" class="sr-only">Password</label>
-                          <div class="input-group">
-                            <input type="text" class="form-control" style="height: 34px" id="height" placeholder="10/15">
-                          </div>
-                          <label for="exampleInputPassword1" class="sr-only">Password</label>
-                          <div class="input-group">
-                            <input type="text" class="form-control" style="height: 34px" id="height" placeholder="CCV 2">
-                          </div>
-                        </div>
-                        <button type="submit" class="btn btn-default">Agree and start</button>
-                      <% end %>
+                  <hr>
+                  <div class="form-group">
+                    <p class="small">We will authorize your credit card for four times the wager you chose above. We will not charge your card before you actually gain some weigth.</p>
+                    
+                    <label for="exampleInputPassword1" class="sr-only">Password</label>
+                    <div class="input-group">
+                      <input type="text" class="form-control" style="height: 34px" id="height" placeholder="0000 0000 0000 0000">
+                    </div>
+                    
+                    <label for="exampleInputPassword1" class="sr-only">Password</label>
+                    <div class="input-group">
+                      <input type="text" class="form-control" style="height: 34px" id="height" placeholder="MM/YY">
+                    </div>
+
+                    <label for="exampleInputPassword1" class="sr-only">Password</label>
+                    <div class="input-group">
+                      <input type="text" class="form-control" style="height: 34px" id="height" placeholder="CCV2">
+
+                    </div>
                   </div>
-              </div>
-          </div>
-      </section>
+                  <button type="submit" class="btn btn-default">Agree and start</button>
+                  <div> <%= link_to "Proceed and process image", stats_path(process_image: 1) %> </div>
+                <% end %>
+            </div>
+        </div>
+    </div>
+</section>
