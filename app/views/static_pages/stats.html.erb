@@ -1,14 +1,145 @@
 <div class="container">
     <div class="row">
-        <div class="col-lg-6 col-sm-8 col-lg-offset-3 col-sm-offset-2 text-center">
+        <div class="col-lg-8 col-sm-12 col-lg-offset-2 text-center">
             <h2>YOUR MOST CURRENT SUBMISSION</h2>
             <hr class="star-primary">
             <p>The latest image you supplied via Evernote</p>
             <%= image_tag $res_url, height: '400' %>
             <p>The weight Evernote extracted from this image:</p>
             <p>This means your current BMI is:</p>
+        </div>
+    </div>
+
+
+
+
+    <div class="row">
+        <div class="col-md-8 col-sm-12 col-md-offset-2">
+            <div class="col-sm-12 text-center">
+                <h2>YOUR RECENT PERFORMANCE</h2>
+                <hr class="star-primary">
+            </div>
+
+
+            <div class="col-sm-12  text-center">
+                <div id="highchart" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+
+
+                <table class="table table-striped">
+                  <tr>
+                    <th class="tg-07dj">Week</th>
+                    <th class="tg-07dj">Weight (kg)</th>
+                    <th class="tg-07dj">Change (kg)</th>
+                    <th class="tg-07dj">Paid or Won</th>
+                    <th class="tg-07dj">Winning balance (CHF)</th>
+                    <th class="tg-07dj">Total Win (CHF)</th>
+                </tr>
+                <tr>
+                    <td class="tg-mbhr">1</td>
+                    <td class="tg-mbhr">77.00</td>
+                    <td class="tg-mbhr"></td>
+                    <td class="tg-mbhr"></td>
+                    <td class="tg-mbhr"></td>
+                    <td class="tg-mbhr"></td>
+                </tr>
+                <tr>
+                    <td class="tg-nrw8">2</td>
+                    <td class="tg-nrw8">76.90</td>
+                    <td class="tg-nrw8">-0.10</td>
+                    <td class="tg-nrw8">Won</td>
+                    <td class="tg-nrw8">45.00</td>
+                    <td class="tg-nrw8">45.00</td>
+                </tr>
+                <tr>
+                    <td class="tg-mbhr">3</td>
+                    <td class="tg-mbhr">76.00</td>
+                    <td class="tg-mbhr">-0.90</td>
+                    <td class="tg-mbhr">Won</td>
+                    <td class="tg-mbhr">30.00</td>
+                    <td class="tg-mbhr">75.00</td>
+                </tr>
+                <tr class="text-danger">
+                    <td class="tg-nrw8">4</td>
+                    <td class="tg-nrw8">76.20</td>
+                    <td class="tg-nrw8">0.20</td>
+                    <td class="tg-nrw8">Paid</td>
+                    <td class="tg-nrw8">-50.00</td>
+                    <td class="tg-nrw8">25.00</td>
+                </tr>
+                <tr>
+                    <td class="tg-mbhr">5</td>
+                    <td class="tg-mbhr">75.40</td>
+                    <td class="tg-mbhr">-0.80</td>
+                    <td class="tg-mbhr">Won</td>
+                    <td class="tg-mbhr">20.00</td>
+                    <td class="tg-mbhr">45.00</td>
+                </tr>
+                <tr>
+                    <td class="tg-nrw8">6</td>
+                    <td class="tg-nrw8">74.90</td>
+                    <td class="tg-nrw8">-0.50</td>
+                    <td class="tg-nrw8">Won</td>
+                    <td class="tg-nrw8">10.00</td>
+                    <td class="tg-nrw8">55.00</td>
+                </tr>
+                <tr class="text-danger">
+                    <td class="tg-mbhr">7</td>
+                    <td class="tg-mbhr">75.10</td>
+                    <td class="tg-mbhr">0.20</td>
+                    <td class="tg-mbhr">Paid</td>
+                    <td class="tg-mbhr">-50.00</td>
+                    <td class="tg-mbhr">5.00</td>
+                </tr>
+                <tr>
+                    <td class="tg-nrw8">8</td>
+                    <td class="tg-nrw8">74.10</td>
+                    <td class="tg-nrw8">-1.00</td>
+                    <td class="tg-nrw8">Won</td>
+                    <td class="tg-nrw8">20.00</td>
+                    <td class="tg-nrw8">25.00</td>
+                </tr>
+                <tr>
+                    <td class="tg-ugh9">9</td>
+                    <td class="tg-ugh9">73.90</td>
+                    <td class="tg-ugh9">-0.20</td>
+                    <td class="tg-ugh9">Won</td>
+                    <td class="tg-ugh9">10.00</td>
+                    <td class="tg-ugh9">35.00</td>
+                </tr>
+                <tr>
+                    <td class="tg-031e">10</td>
+                    <td class="tg-031e">73.70</td>
+                    <td class="tg-031e">-0.20</td>
+                    <td class="tg-031e">Won</td>
+                    <td class="tg-031e">15.00</td>
+                    <td class="tg-031e">50.00</td>
+                </tr>
+                <tr>
+                    <td class="tg-ugh9">11</td>
+                    <td class="tg-ugh9">73.10</td>
+                    <td class="tg-ugh9">-0.60</td>
+                    <td class="tg-ugh9">Won</td>
+                    <td class="tg-ugh9">20.00</td>
+                    <td class="tg-ugh9">70.00</td>
+                </tr>
+                <tr>
+                    <td class="tg-e3zv">12</td>
+                    <td class="tg-e3zv">72.80</td>
+                    <td class="tg-e3zv">-0.30</td>
+                    <td class="tg-e3zv">Won</td>
+                    <td class="tg-e3zv">10.00</td>
+                    <td class="tg-e3zv">80.00</td>
+                </tr>
+            </table>
+
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-8 col-sm-12 col-lg-offset-2 text-center">
             <p ><%= image_tag "profile.png", class: "img-responsive", style: "margin: 0 auto;" %></p>
-            <p class="small">Chef Carl has mastered the art of delicious, healthy Cooking.</p>
+            <p class="small">Chef Carl has mastered the art of delicious healthy cooking.</p>
             <h3>We've just sent an updated list of recipes and Shopping list to your Evernote Notebook!</h3>
             <p class="small">Open your Evernote app now or when you're at the store and it will be all right there for you.</p>
             
@@ -18,139 +149,18 @@
 
 
     <div class="row">
-        <div class="col-lg-6 col-sm-8 col-lg-offset-3 col-sm-offset-2 text-center">
-            <h2>Treat yourself to some delicious food!</h2>
+        <div class="col-lg-8 col-sm-12 col-lg-offset-2 text-center">
+            <h2>Take the hassle out of buying healthy food!</h2>
             <hr class="star-primary">
-            <p>Easy and convenient, get all the food delivered to your door: 
-                <%= link_to image_tag(image_path("LeShopMigros.JPG"), class: "img", size: "100"),'http://teksourcery.com/LeShoppingCart-crop.png', :target => "_blank"  %> </p>
-                <p class="small">This will directly take you to le-shop.ch's website with all the ingredients already in your basket. Does it get any more comfortable?</p>
+            <p>Easy and convenient: Get your groceries delivered right to your door</p>
+            <%= link_to image_tag(image_path("LeShopMigros.JPG"), class: "img", size: "100"),'http://teksourcery.com/LeShoppingCart-crop.png', :target => "_blank"  %> 
+            <p class="small">The above link will directly take you to leshop.ch's website with all the ingredients already in your basket. Does it get any more convenient?</p>
 
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-8 col-sm-12 col-md-offset-2">
-                <div class="col-sm-8 col-sm-offset-2 text-center">
-                    <h2>YOUR RECENT PERFORMANCE</h2>
-                    <hr class="star-primary">
-                </div>
-
-
-                <div class="col-sm-8 col-sm-offset-2 text-center">
-                    <div id="highchart" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
-                    
-
-                    <table class="table table-striped">
-                      <tr>
-                        <th class="tg-07dj">Week</th>
-                        <th class="tg-07dj">Weight (kg)</th>
-                        <th class="tg-07dj">Change (kg)</th>
-                        <th class="tg-07dj">Lose or Pay</th>
-                        <th class="tg-07dj">Winning balance (CHF)</th>
-                        <th class="tg-07dj">Total Win (CHF)</th>
-                    </tr>
-                    <tr>
-                        <td class="active">1</td>
-                        <td class="tg-mbhr">77.00</td>
-                        <td class="tg-mbhr"></td>
-                        <td class="tg-mbhr"></td>
-                        <td class="tg-mbhr"></td>
-                        <td class="tg-mbhr"></td>
-                    </tr>
-                    <tr>
-                        <td class="tg-nrw8">2</td>
-                        <td class="tg-nrw8">76.90</td>
-                        <td class="tg-nrw8">-0.10</td>
-                        <td class="tg-nrw8">Lose</td>
-                        <td class="tg-nrw8">45.00</td>
-                        <td class="tg-nrw8">45.00</td>
-                    </tr>
-                    <tr>
-                        <td class="tg-mbhr">3</td>
-                        <td class="tg-mbhr">76.00</td>
-                        <td class="tg-mbhr">-0.90</td>
-                        <td class="tg-mbhr">Lose</td>
-                        <td class="tg-mbhr">30.00</td>
-                        <td class="tg-mbhr">75.00</td>
-                    </tr>
-                    <tr>
-                        <td class="tg-nrw8">4</td>
-                        <td class="tg-nrw8">76.20</td>
-                        <td class="tg-nrw8">0.20</td>
-                        <td class="tg-nrw8">Pay</td>
-                        <td class="tg-nrw8">-50.00</td>
-                        <td class="tg-nrw8">25.00</td>
-                    </tr>
-                    <tr>
-                        <td class="tg-mbhr">5</td>
-                        <td class="tg-mbhr">75.40</td>
-                        <td class="tg-mbhr">-0.80</td>
-                        <td class="tg-mbhr">Lose</td>
-                        <td class="tg-mbhr">20.00</td>
-                        <td class="tg-mbhr">45.00</td>
-                    </tr>
-                    <tr>
-                        <td class="tg-nrw8">6</td>
-                        <td class="tg-nrw8">74.90</td>
-                        <td class="tg-nrw8">-0.50</td>
-                        <td class="tg-nrw8">Lose</td>
-                        <td class="tg-nrw8">10.00</td>
-                        <td class="tg-nrw8">55.00</td>
-                    </tr>
-                    <tr>
-                        <td class="tg-mbhr">7</td>
-                        <td class="tg-mbhr">75.10</td>
-                        <td class="tg-mbhr">0.20</td>
-                        <td class="tg-mbhr">Pay</td>
-                        <td class="tg-mbhr">-50.00</td>
-                        <td class="tg-mbhr">5.00</td>
-                    </tr>
-                    <tr>
-                        <td class="tg-nrw8">8</td>
-                        <td class="tg-nrw8">74.10</td>
-                        <td class="tg-nrw8">-1.00</td>
-                        <td class="tg-nrw8">Lose</td>
-                        <td class="tg-nrw8">20.00</td>
-                        <td class="tg-nrw8">25.00</td>
-                    </tr>
-                    <tr>
-                        <td class="tg-ugh9">9</td>
-                        <td class="tg-ugh9">73.90</td>
-                        <td class="tg-ugh9">-0.20</td>
-                        <td class="tg-ugh9">Lose</td>
-                        <td class="tg-ugh9">10.00</td>
-                        <td class="tg-ugh9">35.00</td>
-                    </tr>
-                    <tr>
-                        <td class="tg-031e">10</td>
-                        <td class="tg-031e">73.70</td>
-                        <td class="tg-031e">-0.20</td>
-                        <td class="tg-031e">Lose</td>
-                        <td class="tg-031e">15.00</td>
-                        <td class="tg-031e">50.00</td>
-                    </tr>
-                    <tr>
-                        <td class="tg-ugh9">11</td>
-                        <td class="tg-ugh9">73.10</td>
-                        <td class="tg-ugh9">-0.60</td>
-                        <td class="tg-ugh9">Lose</td>
-                        <td class="tg-ugh9">20.00</td>
-                        <td class="tg-ugh9">70.00</td>
-                    </tr>
-                    <tr>
-                        <td class="tg-e3zv">12</td>
-                        <td class="tg-e3zv">72.80</td>
-                        <td class="tg-e3zv">-0.30</td>
-                        <td class="tg-e3zv">Lose</td>
-                        <td class="tg-e3zv">10.00</td>
-                        <td class="tg-e3zv">80.00</td>
-                    </tr>
-                </table>
-
-
-            </div>
         </div>
     </div>
+
+
+</div>
 </div>
 
 <script>
@@ -173,7 +183,7 @@
                 },
                 yAxis: {
                     title: {
-                        text: 'Kg'
+                        text: 'kg'
                     },
                     plotLines: [{
                         value: 0,
@@ -182,14 +192,9 @@
                     }]
                 },
                 tooltip: {
-                    valueSuffix: 'Kg'
+                    valueSuffix: 'kg'
                 },
-                legend: {
-                    layout: 'vertical',
-                    align: 'right',
-                    verticalAlign: 'middle',
-                    borderWidth: 0
-                },
+
                 series: [{
                     name: 'Weight',
                     data: [77.0, 76.9, 76.0, 76.2, 75.4, 74.9, 75.1, 74.1, 73.9, 73.7, 73.1, 72.8]
