@@ -25,12 +25,12 @@
         <h3>Pay or get Paid - You decide</h3>
         <p>We help you reach a healthy Body Mass Index (BMI) in a fun and innovative way. Here's how it works:</p>
         <p>
-        <ol>
-          <li>You tell us your <strong>current weight and height</strong> and we'll tell you your current BMI. You should only use our service if you're overweight.</li>
-          <li>You tell us <strong>how much money you want to bet</strong> each week on your own progress. This sum defines how much you'll have to pay to the community pot if you fail to loose weight in a week. It also defines how big your share of the weekly payout will be when you reach your goal and lose weight.</li>
-          <li>Every monday we'll ask you to upload <strong>a fresh picture of your scale</strong> via the <a href="http://evernote.com" target="_blank">Evernote App</a>. We'll automatically read your current weight and keep it in a log book for you.</li>
-          <li><strong>We help you work towards a healthy BMI</strong> by providing you with delicious but healthy recipes - delivered directly to your <a href="http://evernote.com" target="_blank">Evernote Notebook</a> including a shopping list - so that you always have the list at your finger tips when you go shopping.</li>
-        </ol>
+          <ol>
+            <li>You tell us your <strong>current weight and height</strong> and we'll tell you your current BMI. You should only use our service if you're overweight.</li>
+            <li>You tell us <strong>how much money you want to bet</strong> each week on your own progress. This sum defines how much you'll have to pay to the community pot if you fail to loose weight in a week. It also defines how big your share of the weekly payout will be when you reach your goal and lose weight.</li>
+            <li>Every monday we'll ask you to upload <strong>a fresh picture of your scale</strong> via the <a href="http://evernote.com" target="_blank">Evernote App</a>. We'll automatically read your current weight and keep it in a log book for you.</li>
+            <li><strong>We help you work towards a healthy BMI</strong> by providing you with delicious but healthy recipes - delivered directly to your <a href="http://evernote.com" target="_blank">Evernote Notebook</a> including a shopping list - so that you always have the list at your finger tips when you go shopping.</li>
+          </ol>
         </p>
         <p>Once you've reached a healthy BMI, you're free to keep monitoring your weight and continue to get free meal plans and recipe recommendations.</p>
         <p><strong>Join us to get fit and stay there!</strong></p>
@@ -48,37 +48,89 @@
           <%= image_tag "safe.png", class: "img-responsive" %>
         </a>
       </div>
-      <div class="col-sm-8 portfolio-item">
-        <h3>Questions? We're here to help!</h3>
-        <ol>
-          <li>
-            <p><strong>When do you charge and pay me?</strong></p>
-            <p>When you sign up, we ask for authorization of your credit card for up to four times your weekly commitment. When you lose weight and receive money from other users, we top up your credit. You can always contact our support and have the money wired.</p>
-          </li>
-          <li>
-            <p><strong>When does this stop? How do I get out of my commitment?</strong></p>
-            <p>We really don't want you to give up and therefore it's quite pricey - only after you do not lose weight in four consecutive weeks, we cancel your account and commitment. We want your weight to drop - not you to drop out! </p>
-            <p>Also, if you reach a healthy BMI - anything between 18.5 and 24.9 – you can quit at any time. We also don't want you to drop below 18.5 and we'll automatically suggest to eat more if you get too close to the lower threshold and update your shopping list. Of course, we'll not charge you anything as long as you stay within these bounds.</p>
-          </li>
-          <li>
-            <p><strong>Can I export my data?</strong></p>
-            <p>Yes, we'll soon add support to export your data to [Evernote](http://www.evernote.com) notebooks.</p>
-          </li>
-          <li>
-            <p><strong>How do you know what's healthy for me and what not?</strong></p>
-            <p>We're just starting out and can only provide general nutrition recommendation. if you are on a special diet (gluten-free, lactose-free, vegan, ...) please contact us at <a href="mailto:lee.wasilenko@gmail.com">support@loseorpay.com</a> and we'll do our best to provide you with a customized meal plan. Please understand that this could take a while in our initial growth phase.</p>
-          </li>
-        </ol>
 
-        <p>Feel free to reach out to us anytime on <a href="mailto:lee.wasilenko@gmail.com">support@loseorpay.com</a></p>
+
+      <div class="col-sm-8 portfolio-item">
+        <div class="panel-group" id="accordion">
+         <div class="panel">
+
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#accordionOne">
+                When do you charge and pay me?
+              </a>
+            </h4>
+          </div>
+
+          <div id="accordionOne" class="panel-collapse collapse in">
+            <div class="panel-body">
+             When you sign up, we ask for authorization of your credit card for up to four times your weekly commitment. When you lose weight and receive money from other users, we top up your credit. You can always contact our support and have the money wired.
+           </div>
+         </div>
+       </div>
+
+       <div class="panel">
+
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion" href="#accordionTwo">
+              When does this stop? How do I get out of my commitment?
+            </a>
+          </h4>
+        </div>
+
+        <div id="accordionTwo" class="panel-collapse collapse">
+          <div class="panel-body">
+            We really don't want you to give up and therefore it's quite pricey - only after you do not lose weight in four consecutive weeks, we cancel your account and commitment. We want your weight to drop - not you to drop out!
+          </div>
+        </div>
 
       </div>
-      
+
+      <div class="panel">
+
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion" href="#accordionThree">
+              Can I export my data?
+            </a>
+          </h4>
+        </div>
+
+        <div id="accordionThree" class="panel-collapse collapse">
+          <div class="panel-body">
+            Yes, we'll soon add support to export your data to [Evernote](http://www.evernote.com) notebooks.
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="panel">
+
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion" href="#accordionFour">
+              How do you know what's healthy for me and what not?
+            </a>
+          </h4>
+        </div>
+        
+        <div id="accordionThree" class="panel-collapse collapse">
+          <div class="panel-body">
+            We're just starting out and can only provide general nutrition recommendation. if you are on a special diet (gluten-free, lactose-free, vegan, ...) please contact us at <a href="mailto:lee.wasilenko@gmail.com">support@loseorpay.com</a> and we'll do our best to provide you with a customized meal plan. Please understand that this could take a while in our initial growth phase.
+          </div>
+          
+        </div>
+
+      </div>
+
     </div>
+    <p>Your questions are still not answered?</a></p>
+    <p>Feel free to reach out to us anytime on <a href="mailto:lee.wasilenko@gmail.com">support@loseorpay.com</a></p>
   </div>
+</div>
 </section>
-
-
 <section class="success" id="about">
   <div class="container">
     <div class="row">
