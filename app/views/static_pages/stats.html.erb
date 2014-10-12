@@ -5,13 +5,10 @@
             <hr class="star-primary">
             <p>The latest image you supplied via Evernote</p>
             <%= image_tag $res_url, height: '400' %>
-            <p>The weight Evernote extracted from this image:</p>
-            <p>This means your current BMI is:</p>
+            <p>The weight Evernote extracted from this image: <%= $kilos %></p>
+            <p>Your current BMI is: <%= ($kilos.to_f/(params[:height].to_f/100*params[:height].to_f/100)).round(2) %></p>
         </div>
     </div>
-
-
-
 
     <div class="row">
         <div class="col-md-8 col-sm-12 col-md-offset-2">
