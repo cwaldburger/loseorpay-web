@@ -1,69 +1,88 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>LOSE or PAY</title>
-    <%= stylesheet_link_tag "application", media: "all",
-                                           "data-turbolinks-track" => true %>
-    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-    <%= javascript_include_tag "http://code.highcharts.com/highcharts.js" %>
-    <%= javascript_include_tag "http://code.highcharts.com/modules/exporting.js" %>
-    <%= csrf_meta_tags %>
+<head>
+  <title>LOSE or PAY</title>
+  <%= stylesheet_link_tag "application", media: "all",
+  "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "http://code.highcharts.com/highcharts.js" %>
+  <%= javascript_include_tag "http://code.highcharts.com/modules/exporting.js" %>
+  <%= csrf_meta_tags %>
 
-    <!-- Custom Fonts -->
-    <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+  <!-- Custom Fonts -->
+  <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <%= render 'layouts/shim' %>
+  <%= render 'layouts/shim' %>
 
-  </head>
-    
-  <body id="page-top" class="index">
+</head>
 
-      <!-- Navigation -->
-      <nav class="navbar navbar-default navbar-fixed-top">
-          <div class="container">
-              <!-- Brand and toggle get grouped for better mobile display -->
-              <div class="navbar-header page-scroll">
-                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                      <span class="sr-only">Toggle navigation</span>
-                      <span class="icon-bar"></span>
-                      <span class="icon-bar"></span>
-                      <span class="icon-bar"></span>
-                  </button>
-                  <%= link_to "LOSE or PAY", :root, class: "navbar-brand" %>
-                  
-              </div>
+<body id="page-top" class="index">
 
-              <!-- Collect the nav links, forms, and other content for toggling -->
-              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                  <ul class="nav navbar-nav navbar-right">
-                      <li class="hidden">
-                          <a href="#page-top"></a>
-                      </li>
-                      <li class="page-scroll">
-                          <%= link_to "How It Works", :root %>
-                      </li>
-                      <li class="page-scroll">
-                        <%= link_to "Sign Up", signup_path %>
-                      </li>
-                      <li class="page-scroll">
-                        <%= link_to "Stats", stats_path %>
-                      </li>
-                  </ul>
-              </div>
-              <!-- /.navbar-collapse -->
-          </div>
-          <!-- /.container-fluid -->
-      </nav>
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : '824827977539027',
+        xfbml      : true,
+        version    : 'v2.1'
+      });
+    };
 
-      <%= render 'layouts/header' %>
-      
-      <%= yield %>
+    (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+  </script>
 
-      <%= render 'layouts/footer' %>
+  <!-- Navigation -->
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header page-scroll">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <%= link_to "LOSE or PAY", :root, class: "navbar-brand" %>
 
-  </body>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="hidden">
+            <a href="#page-top"></a>
+          </li>
+          <li class="page-scroll">
+            <%= link_to "How It Works", :root %>
+          </li>
+          <li class="page-scroll">
+            <%= link_to "Sign Up", signup_path %>
+          </li>
+          <li class="page-scroll">
+            <%= link_to "Stats", stats_path %>
+          </li>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+  </nav>
+
+  <%= render 'layouts/header' %>
+
+  <%= yield %>
+
+  <%= render 'layouts/footer' %>
+
+</body>
+
 </html>
