@@ -6,7 +6,7 @@ LoseorpayWeb::Application.routes.draw do
   match '/signup',  to: 'static_pages#signup',  via: 'get'
   match '/stats',   to: 'static_pages#stats',   via: 'get'
   match '/cart',    to: 'static_pages#cart',    via: 'get'
-
+  match '/facebooktest',    to: 'static_pages#facebooktest',    via: 'get'
 
 
   devise_for :users, :controllers => { omniauth_callbacks: 'omniauth_callbacks' }
