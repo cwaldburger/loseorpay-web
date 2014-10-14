@@ -12,7 +12,7 @@ gem 'omniauth-facebook'
 gem 'evernote_oauth'
 gem 'evernote-thrift'
 gem 'nokogiri'
-
+gem 'figaro'
 
 group :development, :test do
   gem 'sqlite3', '1.3.8'
